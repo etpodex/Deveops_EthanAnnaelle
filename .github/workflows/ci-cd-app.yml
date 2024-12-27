@@ -40,6 +40,11 @@ jobs:
   deploy:
     needs: build-and-test # La phase "deploy" ne démarre que si "build-and-test" réussit
     runs-on: ubuntu-latest
+    services:
+      redis:
+        image: redis:alpine
+        ports:
+          - 6379:6379
     steps:
       # Étape 1 : Récupérer le code
       - name: Checkout Code
