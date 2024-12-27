@@ -22,6 +22,10 @@ Before proceeding with the instructions, ensure that Docker is installed and run
 
 First you have to go in the userapi folde :
 cd userapi
+Then you can execute this command :
+docker build -t userapi/deveops_ethanannaelle .
+
+<img width="959" alt="image" src="https://github.com/user-attachments/assets/ddd75e1d-8cdd-43ff-b62a-b7888a914b87" />
 
 
 ## 5.Docker Compose
