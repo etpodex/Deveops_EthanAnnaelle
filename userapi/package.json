@@ -7,7 +7,7 @@
     "start": "node src/index.js",
     "test": "./node_modules/.bin/mocha test/*.js"
   },
-  "author": "Sergei Kudinov",
+  "author": "Annaëlle Houzelle et Ethan Berneau",
   "license": "",
   "dependencies": {
     "body-parser": "^1.20.2",
