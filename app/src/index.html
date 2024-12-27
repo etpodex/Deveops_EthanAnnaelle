@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <meta charset="UTF-8" />
+  <title>DEVOPS USER API</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #4CAF50;
+      color: white;
+      padding: 15px 0;
+      text-align: center;
+    }
+
+    main {
+      padding: 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    h1 {
+      font-size: 2em;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      font-size: 1.5em;
+      margin-top: 30px;
+    }
+
+    p {
+      line-height: 1.6;
+    }
+
+    .api-methods,
+    .other-routes {
+      margin-top: 20px;
+    }
+
+    .method {
+      background-color: #e0f7e0;
+      padding: 10px;
+      margin: 5px 0;
+      border-radius: 5px;
+    }
+
+    .method-header {
+      font-weight: bold;
+      color: #333;
+    }
+
+    .links ul {
+      list-style-type: none;
+      padding-left: 0;
+    }
+
+    .links li {
+      margin: 5px 0;
+    }
+
+    footer {
+      background-color: #4CAF50;
+      color: white;
+      text-align: center;
+      padding: 10px 0;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+  </style>
+  <body>
+    <header>
+      <h1>Welcome to Ethan's and Annaelle's UserAPI</h1>
+      <p>Complete API documentation has been created using Swagger</p>
+    </header>
+
+    <main>
+      <section class="api-methods">
+        <h2>CRUD Operations</h2>
+        <div class="method">
+          <p class="method-header">POST /user</p>
+          <p>Use this method to add a new user to the REDIS DB. In the post request, send a JSON body containing the following information: {"username" = "", "firstname" = "", "lastname"=""}</p>
+        </div>
+        <div class="method">
+          <p class="method-header">PUT /user/updates</p>
+          <p>Update the information of an existing user. Send the following JSON body: {"username" = "", "firstname" = "", "lastname"=""}</p>
+        </div>
+        <div class="method">
+          <p class="method-header">GET /user/:username</p>
+          <p>Retrieve a specific user by username from the REDIS DB.</p>
+        </div>
+        <div class="method">
+          <p class="method-header">DELETE /user/:username</p>
+          <p>Delete a specific user by username from the REDIS DB.</p>
+        </div>
+        <div class="method">
+          <p class="method-header">GET /user/keys</p>
+          <p>Retrieve all keys present in the REDIS DB.</p>
+        </div>
+      </section>
+
+      <section class="other-routes">
+        <h2>Other Routes</h2>
+        <div class="method">
+          <p class="method-header">GET /api-docs</p>
+          <p>Obtain complete documentation of the API.</p>
+        </div>
+        <div class="method">
+          <p class="method-header">GET /health</p>
+          <p>Check the health of the application.</p>
+        </div>
+      </section>
+
+      <section>
+        <h2>Important</h2>
+        <p>This application requires a REDIS DB to work perfectly. If you're using this application on AZURE or in a single Docker container not linked with a REDIS container, API methods won't work for you.</p>
+      </section>
+
+      <section class="links">
+        <h2>Links</h2>
+        <p><strong>Note:</strong> Except for the POST /user endpoint, other API endpoints require at least one database entry to be used.</p>
+        <ul>
+          <li><a href="/api-docs">API Docs</a></li>
+        </ul>
+      </section>
+    </main>
+
+    <footer>
+      <p>Developed by Ethan and Annaelle</p>
+    </footer>
+  </body>
+</html>

@@ -1,6 +1,7 @@
 const express = require('express')
 const userRouter = require('./routes/user')
 const bodyParser = require('body-parser')
+const path = require('path')
 
 const app = express()
 const port = process.env.PORT || 3000
@@ -15,14 +16,18 @@ app.use(bodyParser.urlencoded({
 }))
 app.use(bodyParser.json())
 
-app.get('/', (req, res) => res.send('Hello World!'))
 
+// Route principale
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname,'index.html'))
+})
+
+// Route utilisateur
 app.use('/user', userRouter)
 
 const server = app.listen(port, (err) => {
   if (err) throw err
-  console.log("Server listening the port " + port)
+  console.log("Server listening on port " + port)
 })
-
 
 module.exports = server
