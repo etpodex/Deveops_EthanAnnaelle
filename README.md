@@ -41,7 +41,12 @@ docker push $YOUR_USERNAME/userapi-devops:latest
 <img width="959" alt="image" src="https://github.com/user-attachments/assets/ddd75e1d-8cdd-43ff-b62a-b7888a914b87" />
 
 ## Test of the image
-
+To test the image you enter thic command :
+``` bash
+docker run -p 4000:4000 -d deveops_ethanannaelle/userapi-devops:latest
+```
+that allows you to see your website on the port 3000 :
+<img width="959" alt="image" src="https://github.com/user-attachments/assets/90d93cbc-0777-4e53-940a-ddbd20838f12" />
 
 # 5.Docker Compose
 
