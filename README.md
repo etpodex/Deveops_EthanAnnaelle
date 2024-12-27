@@ -40,10 +40,14 @@ docker push $YOUR_USERNAME/userapi-devops:latest
 
 <img width="959" alt="image" src="https://github.com/user-attachments/assets/ddd75e1d-8cdd-43ff-b62a-b7888a914b87" />
 
+## Test of the image
 
-## 5.Docker Compose
 
-## 6.Kubernetes
+# 5.Docker Compose
 
-## 7.Istio
+
+
+# 6.Kubernetes
+
+# 7.Istio
 
