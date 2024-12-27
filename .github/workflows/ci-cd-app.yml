@@ -11,7 +11,7 @@ on:
       - main
 
 jobs:
-  build:
+  build-and-test:
     runs-on: ubuntu-latest
     services:
       redis:
@@ -37,3 +37,25 @@ jobs:
       run: |
         cd  userapi
         npm test
+  deploy:
+    needs: build-and-test # La phase "deploy" ne démarre que si "build-and-test" réussit
+    runs-on: ubuntu-latest
+    steps:
+      # Étape 1 : Récupérer le code
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      # Étape 2 : Configurer Node.js
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+
+      # Étape 3 : Déploiement
+      - name: Deploy Application
+        env:
+          NODE_ENV: production
+        run: |
+          cd userapi
+          npm install
+          npm run start
