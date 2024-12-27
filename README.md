@@ -20,6 +20,10 @@ It's important to exclude unnecessary files and folders, that are not required i
 
 Before proceeding with the instructions, ensure that Docker is installed and running on your system.
 
+First you have to go in the userapi folde :
+cd userapi
+
+
 ## 5.Docker Compose
 
 ## 6.Kubernetes

@@ -1,3 +1,11 @@
+node_modules
+.*
+!.github
+!.gitignore
+!.eslintignore
+!.eslintrc.json
+
+
 # Logs
 logs
 *.log
