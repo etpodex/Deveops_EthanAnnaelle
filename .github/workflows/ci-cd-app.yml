@@ -62,5 +62,6 @@ jobs:
           NETLIFY_AUTH_TOKEN: "nfp_wM9LTQh382isABrJ1Tu8Fc9jGhVd1sUP7322"
           NETLIFY_SITE_ID: "11a9025b-ab77-40d3-95e9-168a25512ebc"
         run: |
+          cd userapi
           npm install -g netlify-cli
           netlify deploy --dir=build --prod --auth=$NETLIFY_AUTH_TOKEN --site=$NETLIFY_SITE_ID
