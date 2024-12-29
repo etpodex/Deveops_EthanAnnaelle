@@ -5,7 +5,8 @@
   "main": "src/index.js",
   "scripts": {
     "start": "node src/index.js",
-    "test": "./node_modules/.bin/mocha test/*.js"
+    "test": "./node_modules/.bin/mocha test/*.js",
+    "build": "react-scripts build"
   },
   "author": "Annaëlle Houzelle et Ethan Berneau",
   "license": "",
